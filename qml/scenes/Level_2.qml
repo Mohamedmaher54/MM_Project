@@ -1,0 +1,2097 @@
+import Felgo 3.0
+import QtMultimedia 5.9
+ import QtQuick 2.0
+ import "../common"
+import "../scenes"
+SceneBase {
+  id:level2
+    signal level2Pressed
+  NavigationStack {
+         Page {
+             id: page
+             title: "learn Arabic"
+             Text{
+                 anchors.centerIn:  parent
+                 text:"In this level you will test your memorization<br>for the arabic letters"
+                 font.pixelSize: 20
+             }
+             AppImage {
+                     source: "../assets/abc3.jpg"
+                   }
+             AppButton {
+                         anchors.bottom: parent.bottom
+                         anchors.right: parent.right
+                    text: "Start Learning"
+
+                    onClicked :{
+                      page.navigationStack.push(first)
+                    }
+
+
+         }
+             MenuButton {
+               text: "Back to Menu"
+               anchors.left: Level_2.gameWindowAnchorItem.left
+               anchors.leftMargin: 50
+               anchors.top: Level_2.gameWindowAnchorItem.top
+               anchors.topMargin: 0
+               onClicked: backButtonPressed()
+             }
+
+
+         }
+     }
+
+     Component{
+         id: first
+         Page{
+             id: firstpage
+             title:"Press Listen and choose the correct letter you heard"
+
+             AppImage {
+                     anchors.fill: parent
+
+                     fillMode: Image.PreserveAspectFit
+
+                     source: "../assets/qs.jpg"
+                   }
+
+
+         Row{
+                 id:rowbutton
+                anchors.centerIn: parent
+
+
+             AppButton{
+                  id: rightx
+                  backgroundColor: "#727272";
+                  onClicked: backgroundColor="#00ff00";
+
+                 text: "أ";
+
+             }
+             AppButton{
+                  id: wrong1
+                  backgroundColor: "#727272";
+                  onClicked: backgroundColor="#ff0000";
+                  text: "ر";
+
+             }
+             AppButton{
+                  id: wrong2
+                  backgroundColor: "#727272";
+                  onClicked: backgroundColor="#ff0000";
+                  text: "س";
+
+
+             }}
+             AppButton {
+             anchors.bottom:   parent.bottom
+             anchors.right: parent.right
+             text: "Next"
+
+             onClicked :{
+               firstpage.navigationStack.push(second)
+             }}
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play()
+                       }
+                       Audio {
+                                           id: audio1
+                                           source: "http://arabicreadingcourse.com/audio/isolated-letters/alif.mp3"
+                                         }
+
+                     }
+                   }
+                 }}
+
+     Component {
+         id: second
+         Page{
+             id : secondpage
+             title: "Press Listen and choose the correct letter you heard"
+
+             AppImage {
+                     anchors.fill: parent
+
+                     fillMode: Image.PreserveAspectFit
+
+                     source: "../assets/qs.jpg"
+                   }
+
+
+         Row{
+                 id:rowbutton
+                anchors.centerIn: parent
+
+
+             AppButton{
+                  id: wrong1
+                  backgroundColor: "#727272";
+                  onClicked: backgroundColor="#ff0000";
+                  text: "ر";
+
+             }
+             AppButton{
+                  id: wrong2
+                  backgroundColor: "#727272";
+                  onClicked: backgroundColor="#ff0000";
+                  text: "س";
+
+
+             }       AppButton{
+                 id: rightx
+                 backgroundColor: "#727272";
+                 onClicked: backgroundColor="#00ff00";
+
+                text: "ب";
+
+            }}
+         AppButton {
+                anchors.bottom:   parent.bottom
+                anchors.right: parent.right
+                text: "Next"
+
+                onClicked :{
+                  secondpage.navigationStack.push(third)
+                }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() }
+
+
+                       Audio {
+                                           id: audio1
+                                           source: "http://arabicreadingcourse.com/audio/isolated-letters/ba.mp3"
+                                         }
+
+                     }
+                   }
+
+//                       Audio {
+//                         id: audio
+//                         source: "../assets/بطة.m4a"
+//                       }
+
+
+     }}
+
+     Component{
+         id:third
+
+         Page{
+             id: thirdpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ت";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ط";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ك";
+
+
+        }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      thirdpage.navigationStack.push(forth)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/ta.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+
+
+
+}
+
+     Component{
+         id:forth
+
+         Page{
+             id: forthpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ض";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "م";
+
+
+        }
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ث";
+
+        }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      forthpage.navigationStack.push(fifth)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/tha.mp3"
+                   }
+
+                       }
+                     }
+                   }}
+
+     Component{
+         id:fifth
+
+         Page{
+             id: fifthpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ج";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ف";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ق";
+
+
+        }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      fifthpage.navigationStack.push(sixth)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/jiim.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+
+
+}
+
+     Component{
+         id:sixth
+
+         Page{
+             id: sixthpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ى";
+
+        }       AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ح";
+
+       }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ل";
+
+
+        }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      sixthpage.navigationStack.push(seventh)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/hha.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+
+
+
+}
+
+
+     Component{
+         id:seventh
+
+         Page{
+             id: seventhpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ف";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ظ";
+
+
+        }    AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "خ";
+
+       }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      seventhpage.navigationStack.push(ninth)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/kha.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+
+}
+
+
+     Component{
+         id:ninth
+
+         Page{
+             id: ninthpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "د";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ز";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "س";
+
+
+        }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      ninthpage.navigationStack.push(tenth)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/daal.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+
+     Component{
+         id:tenth
+
+         Page{
+             id: tenthpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ر";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "س";
+
+
+        }     AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ذ";
+
+       }}
+
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      tenthpage.navigationStack.push(eleventh)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/thaal.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+
+     Component{
+         id:eleventh
+         Page{
+             id: eleventhpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ش";
+
+        }   AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ر";
+
+       }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ع";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      eleventhpage.navigationStack.push(twelf)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/raa.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+}
+
+     Component{
+         id:twelf
+
+         Page{
+             id: twelfpage
+             title: "Press Listen and choose the correct letter you heard"
+
+
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ز";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ظ";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ق";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twelfpage.navigationStack.push(thirteen)
+                    }
+         }
+             Column {
+                 anchors.bottom: parent.bottom
+                 anchors.left: parent.left
+                 AppButton {
+                   anchors.bottom : parent.bottom
+                   anchors.left: parent.left
+                   text: "Listen"
+                   onClicked: {
+                     audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/zay.mp3"
+                   }
+
+                   }
+                 }
+               }
+
+
+
+
+}
+
+
+     Component{
+         id:thirteen
+         Page{
+             id: thirteenpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "س";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ض";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ل";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      thirteenpage.navigationStack.push(fourteen)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/siin.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:fourteen
+         Page{
+             id: fourteenthpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ث";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ت";
+
+
+        }     AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ش";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      fourteenthpage.navigationStack.push(fiveteen)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/shiin.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:fiveteen
+         Page{
+             id: fiveteenthpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ث";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "س";
+
+
+        }    AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ص";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      fiveteenthpage.navigationStack.push(sixteen)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/saad.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:sixteen
+         Page{
+             id: sixteenthpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ط";
+
+        } AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ض";
+
+       }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "خ";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      sixteenthpage.navigationStack.push(seventeen)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/daad.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:seventeen
+         Page{
+             id: seventeenthpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ط";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ت";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ض";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      seventeenthpage.navigationStack.push(eighteen)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/taa.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:eighteen
+         Page{
+             id: eighteenthpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ظ";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ز";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "س";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      eighteenthpage.navigationStack.push(nineteen)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/thaa.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+}
+
+     Component{
+         id:nineteen
+         Page{
+             id: nineteenthpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ب";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ه";
+
+
+        }  AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ع";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      nineteenthpage.navigationStack.push(twenty)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/ayn.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:twenty
+         Page{
+             id: twentypage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ذ";
+
+        }      AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "غ";
+
+       }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ج";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentypage.navigationStack.push(twentyone)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/ghayn.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+}
+
+     Component{
+         id:twentyone
+         Page{
+             id: twentyonepage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ر";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ن";
+
+
+        }  AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ف";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentyonepage.navigationStack.push(twentytwo)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/fa.mp3"
+                   }
+
+                       }
+                     }
+                   }
+}
+
+     Component{
+         id:twentytwo
+         Page{
+             id: twentytwopage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ض";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ك";
+
+
+        } AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ق";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentytwopage.navigationStack.push(twentythree)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/qaf.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+}
+
+     Component{
+         id:twentythree
+         Page{
+             id: twentythreepage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ك";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ط";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "د";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentythreepage.navigationStack.push(twentyfour)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/kaf.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+
+}
+
+     Component{
+         id:twentyfour
+         Page{
+             id: twentyfourpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ل";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "و";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ا";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentyfourpage.navigationStack.push(twentyfive)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/lam.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:twentyfive
+         Page{
+             id: twentyfivepage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ر";
+
+        }
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "م";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "غ";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentyfivepage.navigationStack.push(twentysix)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/miim.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:twentysix
+         Page{
+             id: twentysixpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ف";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ش";
+
+
+        }  AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ن";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentysixpage.navigationStack.push(twentyseven)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/nuun.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+}
+
+     Component{
+         id:twentyseven
+         Page{
+             id: twentysevenpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ح";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ع";
+
+
+        } AppButton{
+            id: rightx
+            backgroundColor: "#727272";
+            onClicked: backgroundColor="#00ff00";
+
+           text: "ه";
+
+       }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                     twentysevenpage.navigationStack.push(twentyeight)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/ha.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:twentyeight
+         Page{
+             id: twentyeightpage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "و";
+
+        }
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ك";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ط";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentyeightpage.navigationStack.push(twentynine)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/waw.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:twentynine
+         Page{
+             id: twentyninepage
+             title: "Press Listen and choose the correct letter you heard"
+        AppImage {
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectFit
+
+                source: "../assets/qs.jpg"
+              }
+
+
+    Row{
+            id:rowbutton
+                anchors.centerIn: parent
+
+        AppButton{
+             id: wrong1
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ش";
+
+        }
+
+        AppButton{
+             id: rightx
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#00ff00";
+
+            text: "ي";
+
+        }
+        AppButton{
+             id: wrong2
+             backgroundColor: "#727272";
+             onClicked: backgroundColor="#ff0000";
+             text: "ن";
+
+
+        }}
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "Next"
+
+                    onClicked :{
+                      twentyninepage.navigationStack.push(thirty)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/ya.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+
+}
+
+     Component{
+         id:thirty
+         Page{
+             id: thirtypage
+             title: "النهايه"
+             AppImage {
+                     anchors.fill: parent
+                     fillMode: Image.PreserveAspectFit
+                     source: "../assets/end.jpg"
+                   }
+             AppButton {
+                    anchors.bottom:   parent.bottom
+                    anchors.right: parent.right
+                    text: "End"
+
+                    onClicked :{
+                      thirtypage.navigationStack.push(menu)
+                    }
+         }
+             Column {
+                     anchors.bottom: parent.bottom
+                     anchors.left: parent.left
+                     AppButton {
+                       anchors.bottom : parent.bottom
+                       anchors.left: parent.left
+                       text: "Listen"
+                       onClicked: {
+                         audio1.play() } Audio {
+                     id: audio1
+                     source: "http://arabicreadingcourse.com/audio/isolated-letters/alif.mp3"
+                   }
+
+                       }
+                     }
+                   }
+
+//                       Audio {
+//                         id: audio
+//                         source: "../assets/رأس.m4a"
+//                       }
+}
+}
+
+
+
+
+
