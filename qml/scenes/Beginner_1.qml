@@ -29,13 +29,14 @@ NavigationStack {
        }
            MenuButton {
              text: "Back to Menu"
-             anchors.left: Beginner_1.gameWindowAnchorItem.left
-             anchors.leftMargin: 50
-             anchors.top: Beginner_1.gameWindowAnchorItem.top
-             anchors.topMargin: 0
+             anchors.left: level1.gameWindowAnchorItem.left
+             anchors.leftMargin: 10
+             anchors.top: level1.gameWindowAnchorItem.top
+             anchors.topMargin: 10
              onClicked: backButtonPressed()
            }
        }
+
    }
    Component{
        id: first
@@ -1155,10 +1156,7 @@ NavigationStack {
                       anchors.bottom:   parent.bottom
                       anchors.right: parent.right
                       text: "Back To Menu"
-
-                      onClicked :{
-                        twentyninepage.navigationStack.push(thirty)
-                      }
+                      onClicked : backButtonPressed()
            }
                Column {
                        anchors.bottom: parent.bottom

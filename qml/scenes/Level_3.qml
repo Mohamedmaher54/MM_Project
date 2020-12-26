@@ -21,16 +21,16 @@ SceneBase {
                          anchors.bottom: parent.bottom
                          anchors.right: parent.right
                     text: "Start Learning"
-
+//fontBold: true
                     onClicked :{
                       page.navigationStack.push(first)
                     }
          }
              MenuButton {
                text: "Back to Menu"
-               anchors.left: intermediateScene.gameWindowAnchorItem.left
+               anchors.left: level3.gameWindowAnchorItem.left
                anchors.leftMargin: 50
-               anchors.top: intermediateScene.gameWindowAnchorItem.top
+               anchors.top: level3.gameWindowAnchorItem.top
                anchors.topMargin: 0
                onClicked: backButtonPressed()
              }
@@ -1167,49 +1167,9 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
-
-                        onClicked :{
-                          twentyninepage.navigationStack.push(thirty)
-                        }
-             }
-                 Column {
-                         anchors.bottom: parent.bottom
-                         anchors.left: parent.left
-                         AppButton {
-                           anchors.bottom : parent.bottom
-                           anchors.left: parent.left
-                           text: "Listen"
-                           onClicked: {
-                             audio.play()
-                           }
-                         }
-                       }
-
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
- }
- }
-         Component{
-             id:thirty
-             Page{
-                 id: thirtypage
-                 title: "النهايه"
-                 AppImage {
-                         anchors.fill: parent
-                         fillMode: Image.PreserveAspectFit
-                        // source: "../assets/end.jpg"
-                       }
-                 AppButton {
-                        anchors.bottom:   parent.bottom
-                        anchors.right: parent.right
-                        text: "End"
-
-                        onClicked :{
-                          thirtypage.navigationStack.push(menu)
-                        }
+                        text: "Back To Menu"
+                        fontBold: true
+                        onClicked : backButtonPressed()
              }
                  Column {
                          anchors.bottom: parent.bottom

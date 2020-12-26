@@ -15,9 +15,9 @@ SceneBase {
                  text:"In this level you will test your memorization<br>for the arabic letters"
                  font.pixelSize: 20
              }
-             AppImage {
-                     source: "../assets/abc3.jpg"
-                   }
+//             AppImage {
+//                     source: "../assets/abc3.jpg"
+//                   }
              AppButton {
                          anchors.bottom: parent.bottom
                          anchors.right: parent.right
@@ -31,9 +31,9 @@ SceneBase {
          }
              MenuButton {
                text: "Back to Menu"
-               anchors.left: Level_2.gameWindowAnchorItem.left
+               anchors.left: level2.gameWindowAnchorItem.left
                anchors.leftMargin: 50
-               anchors.top: Level_2.gameWindowAnchorItem.top
+               anchors.top: level2.gameWindowAnchorItem.top
                anchors.topMargin: 0
                onClicked: backButtonPressed()
              }
@@ -2022,11 +2022,9 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                    text: "back to Menu"
 
-                    onClicked :{
-                      twentyninepage.navigationStack.push(thirty)
-                    }
+                    onClicked : backButtonPressed()
          }
              Column {
                      anchors.bottom: parent.bottom
@@ -2046,48 +2044,6 @@ SceneBase {
                    }
 
 
-}
-
-     Component{
-         id:thirty
-         Page{
-             id: thirtypage
-             title: "النهايه"
-             AppImage {
-                     anchors.fill: parent
-                     fillMode: Image.PreserveAspectFit
-                     source: "../assets/end.jpg"
-                   }
-             AppButton {
-                    anchors.bottom:   parent.bottom
-                    anchors.right: parent.right
-                    text: "End"
-
-                    onClicked :{
-                      thirtypage.navigationStack.push(menu)
-                    }
-         }
-             Column {
-                     anchors.bottom: parent.bottom
-                     anchors.left: parent.left
-                     AppButton {
-                       anchors.bottom : parent.bottom
-                       anchors.left: parent.left
-                       text: "Listen"
-                       onClicked: {
-                         audio1.play() } Audio {
-                     id: audio1
-                     source: "http://arabicreadingcourse.com/audio/isolated-letters/alif.mp3"
-                   }
-
-                       }
-                     }
-                   }
-
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
 }
 }
 

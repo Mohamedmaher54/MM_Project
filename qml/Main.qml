@@ -13,15 +13,19 @@ GameWindow {
       onLevel3Pressed: gameWindow.state="level3"
 
     }
+
     Beginner_1{
-        id:level1
+        id: beginnerlevel1
+        onBackButtonPressed: gameWindow.state = "menu"
 
     }
     Level_2{
-        id:level2
+        id:beginnerlevel2
+          onBackButtonPressed: gameWindow.state = "menu"
     }
     Level_3{
-        id:level3
+        id:beginnerlevel3
+          onBackButtonPressed: gameWindow.state = "menu"
     }
 
     state: "menu"
@@ -33,18 +37,18 @@ GameWindow {
          },
          State {
            name: "level1"
-           PropertyChanges {target: level1; opacity: 1}
-           PropertyChanges {target: gameWindow; activeScene: level1}
+           PropertyChanges {target: beginnerlevel1; opacity: 1}
+           PropertyChanges {target: gameWindow; activeScene: beginnerlevel1}
          },
          State {
            name: "level2"
-           PropertyChanges {target: level2; opacity: 1}
-           PropertyChanges {target: gameWindow; activeScene: level2}
+           PropertyChanges {target: beginnerlevel2; opacity: 1}
+           PropertyChanges {target: gameWindow; activeScene: beginnerlevel2}
          },
          State {
            name: "level3"
-           PropertyChanges {target: level3; opacity: 1}
-           PropertyChanges {target: gameWindow; activeScene: level3}
+           PropertyChanges {target: beginnerlevel3; opacity: 1}
+           PropertyChanges {target: gameWindow; activeScene: beginnerlevel3}
          }
        ]
     }

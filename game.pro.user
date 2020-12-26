@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.2, 2020-12-24T19:01:27. -->
+<!-- Written by QtCreator 4.11.2, 2020-12-26T20:29:09. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -78,7 +78,7 @@
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QtProjectManager.QMakeBuildStep</value>
       <value type="bool" key="QtProjectManager.QMakeBuildStep.LinkQmlDebuggingLibrary">true</value>
       <value type="QString" key="QtProjectManager.QMakeBuildStep.QMakeArguments"></value>
-      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">true</value>
+      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>
       <value type="bool" key="QtProjectManager.QMakeBuildStep.SeparateDebugInfo">false</value>
       <value type="bool" key="QtProjectManager.QMakeBuildStep.UseQtQuickCompiler">false</value>
      </valuemap>
@@ -287,9 +287,8 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">game2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Mohammed/Downloads/game-20201223T220015Z-001/game/game.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Mohammed/Downloads/game-20201223T220015Z-001/game/game.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/MM_Project/game.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/MM_Project/game.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
