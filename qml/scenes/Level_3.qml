@@ -13,6 +13,7 @@ SceneBase {
                  anchors.centerIn:  parent
                  text:"In this level you will learn some word<br>that begins with arabic letters"
                  font.pixelSize: 20
+                 font.bold: true
              }
              AppImage {
                      source: "../assets/abc3.jpg"
@@ -21,7 +22,7 @@ SceneBase {
                          anchors.bottom: parent.bottom
                          anchors.right: parent.right
                     text: "Start Learning"
-//fontBold: true
+                    textFont: Font.bold
                     onClicked :{
                       page.navigationStack.push(first)
                     }
@@ -52,7 +53,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       firstpage.navigationStack.push(second)
@@ -64,7 +66,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play()
                        }
@@ -95,7 +98,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           secondpage.navigationStack.push(third)
@@ -107,7 +111,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -140,7 +145,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           thirdpage.navigationStack.push(forth)
@@ -152,7 +158,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -190,7 +197,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           forthpage.navigationStack.push(fifth)
@@ -202,7 +210,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -239,7 +248,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           fifthpage.navigationStack.push(sixth)
@@ -251,7 +261,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -288,7 +299,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           sixthpage.navigationStack.push(seventh)
@@ -300,7 +312,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -337,7 +350,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           seventhpage.navigationStack.push(ninth)
@@ -349,7 +363,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -386,7 +401,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           ninthpage.navigationStack.push(tenth)
@@ -398,7 +414,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -434,7 +451,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           tenthpage.navigationStack.push(eleventh)
@@ -446,7 +464,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -473,7 +492,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           eleventhpage.navigationStack.push(twelf)
@@ -485,7 +505,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -517,7 +538,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twelfpage.navigationStack.push(thirteen)
@@ -529,7 +551,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio.play()
                        }
@@ -559,7 +582,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           thirteenpage.navigationStack.push(fourteen)
@@ -571,7 +595,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -597,7 +622,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           fourteenthpage.navigationStack.push(fiveteen)
@@ -609,7 +635,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -635,7 +662,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           fiveteenthpage.navigationStack.push(sixteen)
@@ -647,7 +675,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -673,7 +702,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           sixteenthpage.navigationStack.push(seventeen)
@@ -685,7 +715,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -711,7 +742,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           seventeenthpage.navigationStack.push(eighteen)
@@ -723,7 +755,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -749,7 +782,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           eighteenthpage.navigationStack.push(nineteen)
@@ -761,7 +795,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -787,7 +822,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           nineteenthpage.navigationStack.push(twenty)
@@ -799,7 +835,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -825,7 +862,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentypage.navigationStack.push(twentyone)
@@ -837,7 +875,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -863,7 +902,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentyonepage.navigationStack.push(twentytwo)
@@ -875,7 +915,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -901,7 +942,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentytwopage.navigationStack.push(twentythree)
@@ -913,7 +955,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -939,7 +982,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentythreepage.navigationStack.push(twentyfour)
@@ -951,7 +995,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -977,7 +1022,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentyfourpage.navigationStack.push(twentyfive)
@@ -989,7 +1035,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -1015,7 +1062,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentyfivepage.navigationStack.push(twentysix)
@@ -1027,7 +1075,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -1053,7 +1102,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentysixpage.navigationStack.push(twentyseven)
@@ -1065,7 +1115,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -1091,7 +1142,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                          twentysevenpage.navigationStack.push(twentyeight)
@@ -1103,7 +1155,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -1129,7 +1182,8 @@ SceneBase {
                  AppButton {
                         anchors.bottom:   parent.bottom
                         anchors.right: parent.right
-                        text: "Next"
+                       text: "Next"
+                     textFont: Font.bold
 
                         onClicked :{
                           twentyeightpage.navigationStack.push(twentynine)
@@ -1141,7 +1195,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }
@@ -1177,7 +1232,8 @@ SceneBase {
                          AppButton {
                            anchors.bottom : parent.bottom
                            anchors.left: parent.left
-                           text: "Listen"
+                          text: "Listen"
+                     textFont: Font.bold
                            onClicked: {
                              audio.play()
                            }

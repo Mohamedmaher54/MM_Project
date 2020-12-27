@@ -14,6 +14,7 @@ SceneBase {
                  anchors.centerIn:  parent
                  text:"In this level you will test your memorization<br>for the arabic letters"
                  font.pixelSize: 20
+                 font.bold: true
              }
 //             AppImage {
 //                     source: "../assets/abc3.jpg"
@@ -22,7 +23,7 @@ SceneBase {
                          anchors.bottom: parent.bottom
                          anchors.right: parent.right
                     text: "Start Learning"
-
+                    textFont: Font.bold
                     onClicked :{
                       page.navigationStack.push(first)
                     }
@@ -64,12 +65,23 @@ SceneBase {
 
              AppButton{
                   id: rightx
+                  flat: false
+                  enabled: !animation.running
                   backgroundColor: "#727272";
-                  onClicked: backgroundColor="#00ff00";
-
-                 text: "أ";
-
+                  onClicked:{ backgroundColor="#00ff00"; animation.start()}
+                  text: "أ"
              }
+
+             NumberAnimation {
+                 id: animation
+                         target: rightx
+                         property: "rotation"
+                         from: 0
+                         to: 360
+                         duration: 1000
+                         easing.type: Easing.InOutBack
+
+                       }
              AppButton{
                   id: wrong1
                   backgroundColor: "#727272";
@@ -88,7 +100,8 @@ SceneBase {
              AppButton {
              anchors.bottom:   parent.bottom
              anchors.right: parent.right
-             text: "Next"
+            text: "Next"
+                     textFont: Font.bold
 
              onClicked :{
                firstpage.navigationStack.push(second)
@@ -99,7 +112,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play()
                        }
@@ -148,16 +162,28 @@ SceneBase {
 
              }       AppButton{
                  id: rightx
+                 flat: false
+                 enabled: !animation.running
                  backgroundColor: "#727272";
-                 onClicked: backgroundColor="#00ff00";
+                 onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
                 text: "ب";
 
-            }}
+            }} NumberAnimation {
+             id: animation
+                     target: rightx
+                     property: "rotation"
+                     from: 0
+                     to: 360
+                     duration: 1000
+                     easing.type: Easing.InOutBack
+
+                   }
          AppButton {
                 anchors.bottom:   parent.bottom
                 anchors.right: parent.right
-                text: "Next"
+               text: "Next"
+                     textFont: Font.bold
 
                 onClicked :{
                   secondpage.navigationStack.push(third)
@@ -169,7 +195,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() }
 
@@ -210,13 +237,24 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "ت";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -236,7 +274,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       thirdpage.navigationStack.push(forth)
@@ -248,7 +287,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -302,18 +342,29 @@ SceneBase {
 
         }
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
-
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
             text: "ث";
 
-        }}
+        }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
 
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       forthpage.navigationStack.push(fifth)
@@ -325,7 +376,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -358,13 +410,23 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
-
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
             text: "ج";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -384,7 +446,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       fifthpage.navigationStack.push(sixth)
@@ -396,7 +459,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -442,12 +506,22 @@ SceneBase {
 
         }       AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
-
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
            text: "ح";
 
-       }
+       } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong2
              backgroundColor: "#727272";
@@ -460,7 +534,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       sixthpage.navigationStack.push(seventh)
@@ -472,7 +547,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -528,17 +604,29 @@ SceneBase {
 
         }    AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "خ";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
 
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       seventhpage.navigationStack.push(ninth)
@@ -550,7 +638,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -588,13 +677,23 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
-
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
             text: "د";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -614,7 +713,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       ninthpage.navigationStack.push(tenth)
@@ -626,7 +726,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -679,17 +780,29 @@ SceneBase {
 
         }     AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ذ";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
 
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       tenthpage.navigationStack.push(eleventh)
@@ -701,7 +814,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -743,12 +857,23 @@ SceneBase {
 
         }   AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ر";
 
-       }
+       } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong2
              backgroundColor: "#727272";
@@ -760,7 +885,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       eleventhpage.navigationStack.push(twelf)
@@ -772,7 +898,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -807,13 +934,23 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
-
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
             text: "ز";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -832,7 +969,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twelfpage.navigationStack.push(thirteen)
@@ -844,7 +982,8 @@ SceneBase {
                  AppButton {
                    anchors.bottom : parent.bottom
                    anchors.left: parent.left
-                   text: "Listen"
+                  text: "Listen"
+                     textFont: Font.bold
                    onClicked: {
                      audio1.play() } Audio {
                      id: audio1
@@ -880,13 +1019,23 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
-
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
             text: "س";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -905,7 +1054,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       thirteenpage.navigationStack.push(fourteen)
@@ -917,7 +1067,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -966,16 +1117,28 @@ SceneBase {
 
         }     AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ش";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       fourteenthpage.navigationStack.push(fiveteen)
@@ -987,7 +1150,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1036,16 +1200,28 @@ SceneBase {
 
         }    AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ص";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       fiveteenthpage.navigationStack.push(sixteen)
@@ -1057,7 +1233,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1098,12 +1275,23 @@ SceneBase {
 
         } AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ض";
 
-       }
+       } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong2
              backgroundColor: "#727272";
@@ -1115,7 +1303,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       sixteenthpage.navigationStack.push(seventeen)
@@ -1127,7 +1316,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1160,13 +1350,24 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "ط";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -1185,7 +1386,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       seventeenthpage.navigationStack.push(eighteen)
@@ -1197,7 +1399,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1230,13 +1433,24 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "ظ";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -1255,7 +1469,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       eighteenthpage.navigationStack.push(nineteen)
@@ -1267,7 +1482,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1315,16 +1531,28 @@ SceneBase {
 
         }  AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ع";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       nineteenthpage.navigationStack.push(twenty)
@@ -1336,7 +1564,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1377,12 +1606,22 @@ SceneBase {
 
         }      AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
-
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
            text: "غ";
 
-       }
+       } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong2
              backgroundColor: "#727272";
@@ -1394,7 +1633,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentypage.navigationStack.push(twentyone)
@@ -1406,7 +1646,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1454,16 +1695,28 @@ SceneBase {
 
         }  AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ف";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentyonepage.navigationStack.push(twentytwo)
@@ -1475,7 +1728,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1522,16 +1776,27 @@ SceneBase {
 
         } AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
-
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
            text: "ق";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentytwopage.navigationStack.push(twentythree)
@@ -1543,7 +1808,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1575,13 +1841,24 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "ك";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -1600,7 +1877,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentythreepage.navigationStack.push(twentyfour)
@@ -1612,7 +1890,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1646,13 +1925,23 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
-
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
             text: "ل";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -1671,7 +1960,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentyfourpage.navigationStack.push(twentyfive)
@@ -1683,7 +1973,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1724,13 +2015,24 @@ SceneBase {
 
         }
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "م";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong2
              backgroundColor: "#727272";
@@ -1742,7 +2044,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentyfivepage.navigationStack.push(twentysix)
@@ -1754,7 +2057,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1803,16 +2107,27 @@ SceneBase {
 
         }  AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
-
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
            text: "ن";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentysixpage.navigationStack.push(twentyseven)
@@ -1824,7 +2139,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1872,16 +2188,28 @@ SceneBase {
 
         } AppButton{
             id: rightx
+            flat: false
+            enabled: !animation.running
             backgroundColor: "#727272";
-            onClicked: backgroundColor="#00ff00";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
            text: "ه";
 
-       }}
+       }} NumberAnimation {
+        id: animation
+                target: rightx
+                property: "rotation"
+                from: 0
+                to: 360
+                duration: 1000
+                easing.type: Easing.InOutBack
+
+              }
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                      twentysevenpage.navigationStack.push(twentyeight)
@@ -1893,7 +2221,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -1926,13 +2255,24 @@ SceneBase {
                 anchors.centerIn: parent
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "و";
 
-        }
+        } NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong1
              backgroundColor: "#727272";
@@ -1951,7 +2291,8 @@ SceneBase {
              AppButton {
                     anchors.bottom:   parent.bottom
                     anchors.right: parent.right
-                    text: "Next"
+                   text: "Next"
+                     textFont: Font.bold
 
                     onClicked :{
                       twentyeightpage.navigationStack.push(twentynine)
@@ -1963,7 +2304,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1
@@ -2004,13 +2346,25 @@ SceneBase {
         }
 
         AppButton{
-             id: rightx
-             backgroundColor: "#727272";
-             onClicked: backgroundColor="#00ff00";
+            id: rightx
+            flat: false
+            enabled: !animation.running
+            backgroundColor: "#727272";
+            onClicked:{ backgroundColor="#00ff00"; animation.start()}
 
             text: "ي";
 
         }
+        NumberAnimation {
+            id: animation
+                    target: rightx
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 1000
+                    easing.type: Easing.InOutBack
+
+                  }
         AppButton{
              id: wrong2
              backgroundColor: "#727272";
@@ -2032,7 +2386,8 @@ SceneBase {
                      AppButton {
                        anchors.bottom : parent.bottom
                        anchors.left: parent.left
-                       text: "Listen"
+                      text: "Listen"
+                     textFont: Font.bold
                        onClicked: {
                          audio1.play() } Audio {
                      id: audio1

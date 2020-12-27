@@ -11,31 +11,49 @@ SceneBase {
   Rectangle {
     anchors.fill: parent.gameWindowAnchorItem
     color: "#47688e"
+    Image {
+        id: menuimage
+
+        anchors.fill: parent
+
+        fillMode: Image.PreserveAspectFit
+
+        source: "../assets/menux.jpg"
+    }
   }
   Text {
     anchors.horizontalCenter: parent.horizontalCenter
-    y: 30
-    font.pixelSize: 20
-    color: "#e9e9e9"
-    text: "Select Your Arabic Level"
+    y: 7
+    font.pixelSize: 30
+
+    text: "Select Your Arabic Level";
+    font.bold: true
+
   }
   Column{
-      spacing: 15
-      anchors.centerIn: parent
+      spacing: 20
+      anchors.horizontalCenter: parent.horizontalCenter
+      y:60
       MenuButton{
-          text:"level1"
-          onClicked: level1Pressed()
+          text:"Level 1"
+          color:"#00ff00"
+
+          onClicked:{color:"#90EE90"; level1Pressed()}
       }
 
       MenuButton{
-          text:"level2"
-          onClicked: level2Pressed()
+          text:"Level 2"
+          color:"#00ff00"
+          onClicked:{color:"#90EE90"; level2Pressed()}
       }
 
       MenuButton{
-          text:"level3"
-          onClicked: level3Pressed()
+          text:"Level 3"
+          color:"#00ff00"
+
+          onClicked:{color:"#90EE90"; level3Pressed()}
       }
+
 
 }
 }
