@@ -1,13 +1,17 @@
 import QtQuick 2.0
+import QtMultimedia 5.9
 import Felgo 3.0
 import "../common"
 import "../scenes"
+
 SceneBase {
   id:level3
     signal level3Pressed
   NavigationStack {
+
          Page {
              id: page
+
              title: "learn Arabic"
              Text{
                  anchors.centerIn:  parent
@@ -21,14 +25,14 @@ SceneBase {
              AppButton {
                          anchors.bottom: parent.bottom
                          anchors.right: parent.right
-                    text: "Start Learning"
+                    text: "Start "
                     textFont: Font.bold
                     onClicked :{
                       page.navigationStack.push(first)
                     }
          }
              MenuButton {
-               text: "Back to Menu"
+               text: "Menu"
                anchors.left: level3.gameWindowAnchorItem.left
                anchors.leftMargin: 50
                anchors.top: level3.gameWindowAnchorItem.top
@@ -74,10 +78,10 @@ SceneBase {
                      }
                    }
 
-//                   Audio {
-//                     id: audio1
-//                     source: "../assets/ارنب.mp3"
-//                   }
+                   Audio {
+                     id: audio1
+                     source: "../assets/lion.mp3"
+                   }
 
 
  }
@@ -119,10 +123,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/بطة.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/بطه.mp3"
+                       }
 
 
          }
@@ -166,10 +170,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/تفاحة.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/تمساح.mp3"
+                       }
 
 
 
@@ -218,10 +222,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/ثعلب.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ثعلب.mp3"
+                       }
 
 
 
@@ -269,10 +273,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/جمل.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/جمل.mp3"
+                       }
 
 
 
@@ -320,10 +324,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/حصان.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/حصان.mp3"
+                       }
 
 
 
@@ -371,10 +375,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/خروف.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/خروف.mp3"
+                       }
 
 
 
@@ -422,10 +426,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/دب.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/دجاجه.mp3"
+                       }
 
 
 
@@ -472,10 +476,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/ذئب.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ذئب.mp3"
+                       }
  }
 
  }
@@ -513,10 +517,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                      Audio {
+                         id: audio
+                         source: "../assets/رجل.mp3"
+                       }
  }
  }
          Component{
@@ -559,10 +563,10 @@ SceneBase {
                      }
                    }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/دب.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/زرافه.mp3"
+                       }
 
 
 
@@ -603,10 +607,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/سمك.mp3"
+                       }
  }
  }
          Component{
@@ -643,10 +647,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/شمس.mp3"
+                       }
  }
  }
          Component{
@@ -683,10 +687,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/صقر.mp3"
+                       }
  }
  }
          Component{
@@ -723,10 +727,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ضفدع.mp3"
+                       }
  }
  }
          Component{
@@ -763,10 +767,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/طائره.mp3"
+                       }
  }
  }
          Component{
@@ -803,10 +807,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ظرف.mp3"
+                       }
  }
  }
          Component{
@@ -843,10 +847,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/عصفور.mp3"
+                       }
  }
  }
          Component{
@@ -883,10 +887,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/غواصه.mp3"
+                       }
  }
  }
          Component{
@@ -923,10 +927,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/فراشه.mp3"
+                       }
  }
  }
          Component{
@@ -963,10 +967,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/قطه.mp3"
+                       }
  }
  }
          Component{
@@ -1003,10 +1007,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/كلب.mp3"
+                       }
  }
  }
          Component{
@@ -1043,10 +1047,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ليمون.mp3"
+                       }
  }
  }
          Component{
@@ -1083,10 +1087,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/موز.mp3"
+                       }
  }
  }
          Component{
@@ -1123,10 +1127,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ن نحل.mp3"
+                       }
  }
  }
          Component{
@@ -1163,10 +1167,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ه هلال.mp3"
+                       }
  }
  }
          Component{
@@ -1203,10 +1207,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/وجه.mp3"
+                       }
  }
  }
          Component{
@@ -1240,10 +1244,10 @@ SceneBase {
                          }
                        }
 
-//                       Audio {
-//                         id: audio
-//                         source: "../assets/رأس.m4a"
-//                       }
+                       Audio {
+                         id: audio
+                         source: "../assets/ي يد.mp3"
+                       }
  }
  }
  }
