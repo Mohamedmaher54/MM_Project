@@ -13,12 +13,26 @@ SceneBase {
              id: page
 
              title: "learn Arabic"
+
+             Image {
+
+                 anchors.fill: parent
+
+                 fillMode: Image.PreserveAspectFit
+
+                   source: "../assets/xlvlbg.jpg"
+                   }
              Text{
-                 anchors.centerIn:  parent
+                 anchors.horizontalCenter: parent.horizontalCenter
+
                  text:"In this level you will learn some word<br>that begins with arabic letters"
+                 y: 100
                  font.pixelSize: 20
                  font.bold: true
+
+
              }
+
              AppImage {
                      source: "../assets/abc3.jpg"
                    }
@@ -32,7 +46,7 @@ SceneBase {
                     }
          }
              MenuButton {
-               text: "Menu"
+               text: "Back to Menu"
                anchors.left: level3.gameWindowAnchorItem.left
                anchors.leftMargin: 50
                anchors.top: level3.gameWindowAnchorItem.top

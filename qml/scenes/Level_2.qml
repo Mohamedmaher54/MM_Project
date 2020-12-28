@@ -10,15 +10,26 @@ SceneBase {
          Page {
              id: page
              title: "learn Arabic"
+
+             Image {
+
+                 anchors.fill: parent
+
+                 fillMode: Image.PreserveAspectFit
+
+                   source: "../assets/xlvlbg.jpg"
+                   }
              Text{
-                 anchors.centerIn:  parent
-                 text:"In this level you will test your memorization<br>for the arabic letters"
+                 anchors.horizontalCenter: parent.horizontalCenter
+
+                 text:"In this level you will test your<br>memorization for the arabic letters"
+                 y: 100
                  font.pixelSize: 20
                  font.bold: true
+
+
              }
-//             AppImage {
-//                     source: "../assets/abc3.jpg"
-//                   }
+
              AppButton {
                          anchors.bottom: parent.bottom
                          anchors.right: parent.right

@@ -10,18 +10,25 @@ NavigationStack {
        Page {
            id: page
            title: "learn Arabic"
+           Image {
+
+               anchors.fill: parent
+
+               fillMode: Image.PreserveAspectFit
+
+                 source: "../assets/xlvlbg.jpg"
+                 }
            Text{
-               anchors.centerIn:  parent
+               anchors.horizontalCenter: parent.horizontalCenter
 
                text:"In this level you will learn arabic letters"
-
+               y: 100
                font.pixelSize: 20
-               //font.weight: font.bold
                font.bold: true
+
+
            }
-           AppImage {
-                //   source: "../assets/abc3.jpg"
-                 }
+
            AppButton {
                        anchors.bottom: parent.bottom
                        anchors.right: parent.right

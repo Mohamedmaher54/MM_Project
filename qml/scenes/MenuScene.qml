@@ -11,14 +11,15 @@ SceneBase {
   Rectangle {
     anchors.fill: parent.gameWindowAnchorItem
     color: "#47688e"
+
+    anchors.leftMargin: 80
+    anchors.rightMargin: 80
     Image {
         id: menuimage
 
         anchors.fill: parent
 
-        fillMode: Image.PreserveAspectFit
-
-        source: "../assets/menux.jpg"
+        source: "../assets/menu2.jpg"
     }
   }
   Text {
